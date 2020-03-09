@@ -242,7 +242,6 @@ h2 {
 
 .aboutUs__info {
   font-size: 18px;
-  text-align: justify;
   color: #767e9e;
   font-family: 'Lato';
   padding-bottom: 42px;
@@ -259,19 +258,23 @@ h2 {
 
 .photos {
   display: flex;
-  padding-left: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .photo__name {
   font-size: 15px;
   color: #666d89;
-  padding-top: 11px;
   font-family: 'Lato';
-
   font-weight: 800;
 }
+
 .photo {
   width: 285px;
+}
+
+.photo:first-child {
+  margin-bottom: 15px;
 }
 
 .photo:nth-child(3) {
