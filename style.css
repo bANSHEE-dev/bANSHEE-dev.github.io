@@ -5,21 +5,25 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   margin: auto;
   font-family:  'Lato', 'Verdana', serif;
   font-size: 12px;
+  scroll-behavior: smooth;
 }
 
 section {
   max-width: 1020px;
+  margin: 0 auto;
 }
 
 
 header {
   height: 95px;
   background-color: #2d303a;
-  position: relative;
+  position: fixed;
+  width: 1020px;
+  z-index: 99999;
 }
 
 .header__logo {
@@ -47,7 +51,7 @@ li {
   padding-left: 20px;
 }
 
-.selected a {
+.active a {
   color: #f06c64;
 }
 
@@ -80,7 +84,7 @@ li {
   align-items: center;
   justify-content: center;
   width: 1020px;
- 
+  padding-top: 95px;
 }
 
 .arrow-right {
@@ -147,7 +151,7 @@ h3 {
 }
 
 .text-info {
-  line-height: ;
+
 }
 
 /* ------------Singolo 2------------ */
@@ -162,7 +166,8 @@ section {
 
 .portfolio {
   background-color: #2d303a;
-  padding-bottom: 667px;
+  overflow: hidden;
+  padding-bottom: 25px;
 }
 .wrapper {
   margin: auto;
@@ -242,6 +247,7 @@ h2 {
 
 .aboutUs__info {
   font-size: 18px;
+  text-align: justify;
   color: #767e9e;
   font-family: 'Lato';
   padding-bottom: 42px;
@@ -258,23 +264,16 @@ h2 {
 
 .photos {
   display: flex;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
 }
 
 .photo__name {
   font-size: 15px;
   color: #666d89;
+  padding-top: 11px;
   font-family: 'Lato';
+
   font-weight: 800;
-}
-
-.photo {
-  width: 285px;
-}
-
-.photo:first-child {
-  margin-bottom: 15px;
 }
 
 .photo:nth-child(3) {
@@ -420,6 +419,29 @@ textarea::-webkit-input-placeholder {
 
 }
 
+.btn__submit {
+  position: absolute;
+  top: 90%;
+  left: 40px;
+  width: 136px;
+  height: 38px;
+  padding: 11px 40px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #686fff;
+  background-color: #FBC65F;
+  border: 1px solid #f48c8f;
+  transition: all 0.3s ease-in;
+}
+
+.btn__submit:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: inherit;
+}
+
 .flexbox {
   display: inline-flex;
 }
@@ -457,6 +479,11 @@ h4 {
 .contacts img {
   padding-right: 12px;
   padding-top: 6px;
+}
+
+.contacts a {
+  text-decoration: none;
+  color: #f0d8d9;
 }
 
 .location {
@@ -527,4 +554,72 @@ footer {
   right: 21px;
   bottom: 10px;
   width: 188px;
+  cursor: pointer;
 }
+
+
+ /*--------- Media ---------*/
+
+ @media(max-width: 768px) {
+   section {
+     max-width: 768px;
+   }
+   header {
+     position: relative;
+     max-width: 768px;
+   }
+   .header__bottom {
+    max-width: 768px;
+   }
+   .aboutus__bottom {
+     max-width: 78px;
+   }
+   .slider__phones {
+     max-width: 768px;
+   }
+   .container__phoneV {
+    width: 156px;
+    height: 340px;
+    margin-left: 30px;
+    margin-top: -60px;
+    }
+    .container__phoneH {
+      width: 340px;
+      height: 156px;
+      margin-right: 39px;
+      margin-top: 30px;
+  
+    }
+    .arrow-left {
+      margin-left: 250px;
+      margin-top: -55px;
+    }
+    .arrow-right {
+      margin-right: 282px;
+      margin-bottom: 80px;
+    }
+    .container__phone-bottom {
+      max-width: 768px;
+    }
+    .portfolio__bottom {
+      max-width: 768px;
+    }
+    .bottom__border {
+      max-width: 768px;
+    }
+    .photo {
+      margin-right: 20px;
+    }
+    .photo img {
+      width: 220px;
+      height: 220px;
+    }
+    .contact__adress {
+      width: 100px;
+    }
+    form {
+      width: 200px;
+      margin-left: 40px;
+    }
+   }
+

@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>SingoloDone</title>
+  <title>Singolo</title>
 </head>
 <body>
   
   <!--Singolo 1-->
-
-  <section>
+  <section id='home'>
     <div class="container">
       <header>
         <div class="header__logo">
@@ -19,14 +18,16 @@
             <img src="assets/img/logo.png" alt="">
           </a>
         </div>
-        <div class="header__menu">
+        <div class="header__menu" id="menu-header">
+          <nav>
           <ul class="navigation">
-            <li class="selected"><a href="#">Home</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
+        </nav>
         </div>
         <div class="header__bottom"></div>
     </div>
@@ -46,7 +47,8 @@
   </div>
   </section>
   <section>
-    <div class="container">
+    <div class="container" >
+      <div id="services"></div>
       <div class="services">
         <h1>Our Services</h1>
         <p class="text">
@@ -95,7 +97,7 @@
             </p>
           </div>
           <div class="info">
-            <img src="assets/img/star.png" alt="">
+            <img src="assets/img/Star.png" alt="">
             <h3>Feel Like A Star</h3>
             <p>
               Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
@@ -107,8 +109,9 @@
   </section>
 
 <!--Singolo 2-->
-
-<div class="container">
+<section>
+<div class="container" >
+  <div id="portfolio"></div>
   <div class="portfolio">
       <h2>Portfolio</h2>
       <div class="portfolio__info">
@@ -138,6 +141,7 @@
 </div>
   <div class="portfolio__bottom"></div>
 <div class="container">
+  <div id="about"></div>
   <div class="aboutUs">
       <h2>About Us</h2>
 
@@ -224,11 +228,12 @@
       <div class="aboutus__bottom"></div>
   </div>
 </div>
-
+</section>
 <!--Singolo 3-->
 
 <section>
-  <div class="container-3">
+  <div id="contact"></div>
+  <div class="container-3" >
     <div class="wrapper">
       <h3 class="get-quote">Get a Quote</h3>
       <p class="quote__descr">
@@ -238,10 +243,13 @@
       </p>
       <div class="flexbox">
         <div class="footer__form">
+          <form action="">
           <input type="text" placeholder="Name (Required)">
           <input type="text" placeholder="Email (Required)">
           <input type="text" placeholder="Subject">
           <textarea name="message" placeholder="Describe your project in detail..." cols="30" rows="13"></textarea>
+          <button class="btn__submit">Submit</button>
+        </form>
         </div>
         <div class="contact__inform">
           <h4>Contact Information</h4>
@@ -251,16 +259,15 @@
             volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
             <div class="contacts">
               <div><img class="location" src="assets/img/location.png" alt=""> Elm St. 14/05 Lost City </div>
-              <div><img src="assets/img/phone.png" alt="">03528 331 86 35 </div>
-              <div><img src="assets/img/mail.png" alt="">info@singolo.com </div>
+              <div><img src="assets/img/phone.png" alt=""><a href="tel: 03528 331 86 35">03528 331 86 35</a> </div>
+              <div><img src="assets/img/mail.png" alt=""><a href="mail: info@singolo.com ">info@singolo.com </a></div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="bottom__border"></div>
-
-  </div>
+  </div> 
 </section>
 <footer>
   <div class="wrapper">
@@ -275,6 +282,7 @@
       </ul>
     </div>
   </div>
-</footer>
+</footer> 
+<script src="main.js"></script>
 </body>
 </html>
