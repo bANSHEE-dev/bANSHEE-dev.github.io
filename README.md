@@ -1,2 +1,2 @@
 # singolo
-https://banshee-dev1.github.io/
+https://banshee-dev.github.io/
